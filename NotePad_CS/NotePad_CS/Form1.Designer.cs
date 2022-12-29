@@ -266,26 +266,29 @@
             this.menuExibirZoomReduzir,
             this.menuExibirZoomRestaurar});
             this.menuExibirZoom.Name = "menuExibirZoom";
-            this.menuExibirZoom.Size = new System.Drawing.Size(165, 22);
+            this.menuExibirZoom.Size = new System.Drawing.Size(180, 22);
             this.menuExibirZoom.Text = "Zoom";
             // 
             // menuExibirZoomAmpliar
             // 
             this.menuExibirZoomAmpliar.Name = "menuExibirZoomAmpliar";
-            this.menuExibirZoomAmpliar.Size = new System.Drawing.Size(132, 22);
+            this.menuExibirZoomAmpliar.Size = new System.Drawing.Size(180, 22);
             this.menuExibirZoomAmpliar.Text = "Ampliar";
+            this.menuExibirZoomAmpliar.Click += new System.EventHandler(this.menuExibirZoomAmpliar_Click);
             // 
             // menuExibirZoomReduzir
             // 
             this.menuExibirZoomReduzir.Name = "menuExibirZoomReduzir";
-            this.menuExibirZoomReduzir.Size = new System.Drawing.Size(132, 22);
+            this.menuExibirZoomReduzir.Size = new System.Drawing.Size(180, 22);
             this.menuExibirZoomReduzir.Text = "Reduzir";
+            this.menuExibirZoomReduzir.Click += new System.EventHandler(this.menuExibirZoomReduzir_Click);
             // 
             // menuExibirZoomRestaurar
             // 
             this.menuExibirZoomRestaurar.Name = "menuExibirZoomRestaurar";
-            this.menuExibirZoomRestaurar.Size = new System.Drawing.Size(132, 22);
+            this.menuExibirZoomRestaurar.Size = new System.Drawing.Size(180, 22);
             this.menuExibirZoomRestaurar.Text = "Restaurar";
+            this.menuExibirZoomRestaurar.Click += new System.EventHandler(this.menuExibirZoomRestaurar_Click);
             // 
             // menuExibirBarraDeStatus
             // 
@@ -293,8 +296,9 @@
             this.menuExibirBarraDeStatus.CheckOnClick = true;
             this.menuExibirBarraDeStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.menuExibirBarraDeStatus.Name = "menuExibirBarraDeStatus";
-            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(165, 22);
+            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(180, 22);
             this.menuExibirBarraDeStatus.Text = "Barra de Status";
+            this.menuExibirBarraDeStatus.Click += new System.EventHandler(this.menuExibirBarraDeStatus_Click);
             // 
             // menuAjuda
             // 

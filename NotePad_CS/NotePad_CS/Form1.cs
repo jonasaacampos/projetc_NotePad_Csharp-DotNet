@@ -276,6 +276,37 @@ namespace NotePad_CS
 
         #endregion
 
+        #region Menu Exibir
+        private void menuExibirZoomAmpliar_Click(object sender, EventArgs e)
+        {
+            txtContent.ZoomFactor += 0.1f;
+            AtualizarZoomStatusBar(txtContent.ZoomFactor);
+        }
+
+        private void menuExibirZoomReduzir_Click(object sender, EventArgs e)
+        {
+            txtContent.ZoomFactor -= 0.1f;
+            AtualizarZoomStatusBar(txtContent.ZoomFactor);
+        }
+
+        private void menuExibirZoomRestaurar_Click(object sender, EventArgs e)
+        {
+            txtContent.ZoomFactor = 1.0f;
+            AtualizarZoomStatusBar(txtContent.ZoomFactor);
+        }
+
+        private void AtualizarZoomStatusBar(float zoom)
+        {
+            statusBarLabel.Text = $"{Math.Floor(zoom * 100)} %";
+        }
+
+        private void menuExibirBarraDeStatus_Click(object sender, EventArgs e)
+        {
+            statusBar.Visible = menuExibirBarraDeStatus.Checked;
+        }
+
+        #endregion
+
         #region toolStripStatusLabel1_Click
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
@@ -285,8 +316,9 @@ namespace NotePad_CS
 
 
 
+
         #endregion
 
-        
+       
     }
 }
