@@ -30,18 +30,15 @@
         {
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.menuArquivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuEditar = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuFormatar = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuExibir = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuAjuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoNovo = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuArquivoAbrir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoNovaJanela = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.menuArquivoAbrir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoSalvarComo = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuArquivoSair = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuEditar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEditarDesfazer = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEditarRefazer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -51,13 +48,16 @@
             this.menuEditarExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.menuEditarDataHora = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuFormatar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFormatarQuebraDeLinhaAutomatica = new System.Windows.Forms.ToolStripMenuItem();
             this.menuFormatarFonte = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuExibir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExibirZoom = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExibirZoomAmpliar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExibirZoomReduzir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExibirZoomRestaurar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuExibirBarraDeStatus = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuAjuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAjudaExibirAjuda = new System.Windows.Forms.ToolStripMenuItem();
             this.menuAjudaSobre = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBar = new System.Windows.Forms.StatusStrip();
@@ -86,8 +86,8 @@
             // 
             this.menuArquivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuArquivoNovo,
-            this.menuArquivoAbrir,
             this.menuArquivoNovaJanela,
+            this.menuArquivoAbrir,
             this.toolStripSeparator1,
             this.menuArquivoSalvar,
             this.menuArquivoSalvarComo,
@@ -96,6 +96,58 @@
             this.menuArquivo.Name = "menuArquivo";
             this.menuArquivo.Size = new System.Drawing.Size(65, 21);
             this.menuArquivo.Text = "Arquivo";
+            // 
+            // menuArquivoNovo
+            // 
+            this.menuArquivoNovo.Name = "menuArquivoNovo";
+            this.menuArquivoNovo.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoNovo.Text = "Novo";
+            this.menuArquivoNovo.Click += new System.EventHandler(this.menuArquivoNovo_Click);
+            // 
+            // menuArquivoAbrir
+            // 
+            this.menuArquivoAbrir.Name = "menuArquivoAbrir";
+            this.menuArquivoAbrir.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoAbrir.Text = "Abrir";
+            this.menuArquivoAbrir.Click += new System.EventHandler(this.menuArquivoAbrir_Click);
+            // 
+            // menuArquivoNovaJanela
+            // 
+            this.menuArquivoNovaJanela.Name = "menuArquivoNovaJanela";
+            this.menuArquivoNovaJanela.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoNovaJanela.Text = "Nova Janela";
+            this.menuArquivoNovaJanela.Click += new System.EventHandler(this.menuArquivoNovaJanela_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // menuArquivoSalvar
+            // 
+            this.menuArquivoSalvar.Name = "menuArquivoSalvar";
+            this.menuArquivoSalvar.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoSalvar.Text = "Salvar";
+            this.menuArquivoSalvar.Click += new System.EventHandler(this.menuArquivoSalvar_Click);
+            // 
+            // menuArquivoSalvarComo
+            // 
+            this.menuArquivoSalvarComo.Name = "menuArquivoSalvarComo";
+            this.menuArquivoSalvarComo.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoSalvarComo.Text = "Salvar Como";
+            this.menuArquivoSalvarComo.Click += new System.EventHandler(this.menuArquivoSalvarComo_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // menuArquivoSair
+            // 
+            this.menuArquivoSair.Name = "menuArquivoSair";
+            this.menuArquivoSair.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoSair.Text = "Sair";
+            this.menuArquivoSair.Click += new System.EventHandler(this.menuArquivoSair_Click);
             // 
             // menuEditar
             // 
@@ -113,6 +165,58 @@
             this.menuEditar.Size = new System.Drawing.Size(54, 21);
             this.menuEditar.Text = "Editar";
             // 
+            // menuEditarDesfazer
+            // 
+            this.menuEditarDesfazer.Name = "menuEditarDesfazer";
+            this.menuEditarDesfazer.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarDesfazer.Text = "Desfazer";
+            // 
+            // menuEditarRefazer
+            // 
+            this.menuEditarRefazer.Name = "menuEditarRefazer";
+            this.menuEditarRefazer.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarRefazer.Text = "Refazer";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(144, 6);
+            // 
+            // menuEditarRecortar
+            // 
+            this.menuEditarRecortar.Name = "menuEditarRecortar";
+            this.menuEditarRecortar.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarRecortar.Text = "Recortar";
+            // 
+            // menuEditarCopiar
+            // 
+            this.menuEditarCopiar.Name = "menuEditarCopiar";
+            this.menuEditarCopiar.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarCopiar.Text = "Copiar";
+            // 
+            // menuEditarColar
+            // 
+            this.menuEditarColar.Name = "menuEditarColar";
+            this.menuEditarColar.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarColar.Text = "Colar";
+            // 
+            // menuEditarExcluir
+            // 
+            this.menuEditarExcluir.Name = "menuEditarExcluir";
+            this.menuEditarExcluir.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarExcluir.Text = "Excluir";
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(144, 6);
+            // 
+            // menuEditarDataHora
+            // 
+            this.menuEditarDataHora.Name = "menuEditarDataHora";
+            this.menuEditarDataHora.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarDataHora.Text = "Data e Hora";
+            // 
             // menuFormatar
             // 
             this.menuFormatar.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -121,122 +225,6 @@
             this.menuFormatar.Name = "menuFormatar";
             this.menuFormatar.Size = new System.Drawing.Size(73, 21);
             this.menuFormatar.Text = "Formatar";
-            // 
-            // menuExibir
-            // 
-            this.menuExibir.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuExibirZoom,
-            this.menuExibirBarraDeStatus});
-            this.menuExibir.Name = "menuExibir";
-            this.menuExibir.Size = new System.Drawing.Size(52, 21);
-            this.menuExibir.Text = "Exibir";
-            // 
-            // menuAjuda
-            // 
-            this.menuAjuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuAjudaExibirAjuda,
-            this.menuAjudaSobre});
-            this.menuAjuda.Name = "menuAjuda";
-            this.menuAjuda.Size = new System.Drawing.Size(53, 21);
-            this.menuAjuda.Text = "Ajuda";
-            // 
-            // menuArquivoNovo
-            // 
-            this.menuArquivoNovo.Name = "menuArquivoNovo";
-            this.menuArquivoNovo.Size = new System.Drawing.Size(180, 22);
-            this.menuArquivoNovo.Text = "Novo";
-            // 
-            // menuArquivoNovaJanela
-            // 
-            this.menuArquivoNovaJanela.Name = "menuArquivoNovaJanela";
-            this.menuArquivoNovaJanela.Size = new System.Drawing.Size(180, 22);
-            this.menuArquivoNovaJanela.Text = "Nova Janela";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // menuArquivoAbrir
-            // 
-            this.menuArquivoAbrir.Name = "menuArquivoAbrir";
-            this.menuArquivoAbrir.Size = new System.Drawing.Size(180, 22);
-            this.menuArquivoAbrir.Text = "Abrir";
-            // 
-            // menuArquivoSalvar
-            // 
-            this.menuArquivoSalvar.Name = "menuArquivoSalvar";
-            this.menuArquivoSalvar.Size = new System.Drawing.Size(180, 22);
-            this.menuArquivoSalvar.Text = "Salvar";
-            // 
-            // menuArquivoSalvarComo
-            // 
-            this.menuArquivoSalvarComo.Name = "menuArquivoSalvarComo";
-            this.menuArquivoSalvarComo.Size = new System.Drawing.Size(180, 22);
-            this.menuArquivoSalvarComo.Text = "Salvar Como";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // menuArquivoSair
-            // 
-            this.menuArquivoSair.Name = "menuArquivoSair";
-            this.menuArquivoSair.Size = new System.Drawing.Size(180, 22);
-            this.menuArquivoSair.Text = "Sair";
-            // 
-            // menuEditarDesfazer
-            // 
-            this.menuEditarDesfazer.Name = "menuEditarDesfazer";
-            this.menuEditarDesfazer.Size = new System.Drawing.Size(180, 22);
-            this.menuEditarDesfazer.Text = "Desfazer";
-            // 
-            // menuEditarRefazer
-            // 
-            this.menuEditarRefazer.Name = "menuEditarRefazer";
-            this.menuEditarRefazer.Size = new System.Drawing.Size(180, 22);
-            this.menuEditarRefazer.Text = "Refazer";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
-            // 
-            // menuEditarRecortar
-            // 
-            this.menuEditarRecortar.Name = "menuEditarRecortar";
-            this.menuEditarRecortar.Size = new System.Drawing.Size(180, 22);
-            this.menuEditarRecortar.Text = "Recortar";
-            // 
-            // menuEditarCopiar
-            // 
-            this.menuEditarCopiar.Name = "menuEditarCopiar";
-            this.menuEditarCopiar.Size = new System.Drawing.Size(180, 22);
-            this.menuEditarCopiar.Text = "Copiar";
-            // 
-            // menuEditarColar
-            // 
-            this.menuEditarColar.Name = "menuEditarColar";
-            this.menuEditarColar.Size = new System.Drawing.Size(180, 22);
-            this.menuEditarColar.Text = "Colar";
-            // 
-            // menuEditarExcluir
-            // 
-            this.menuEditarExcluir.Name = "menuEditarExcluir";
-            this.menuEditarExcluir.Size = new System.Drawing.Size(180, 22);
-            this.menuEditarExcluir.Text = "Excluir";
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
-            // 
-            // menuEditarDataHora
-            // 
-            this.menuEditarDataHora.Name = "menuEditarDataHora";
-            this.menuEditarDataHora.Size = new System.Drawing.Size(180, 22);
-            this.menuEditarDataHora.Text = "Data e Hora";
             // 
             // menuFormatarQuebraDeLinhaAutomatica
             // 
@@ -250,6 +238,15 @@
             this.menuFormatarFonte.Size = new System.Drawing.Size(238, 22);
             this.menuFormatarFonte.Text = "Fonte";
             // 
+            // menuExibir
+            // 
+            this.menuExibir.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuExibirZoom,
+            this.menuExibirBarraDeStatus});
+            this.menuExibir.Name = "menuExibir";
+            this.menuExibir.Size = new System.Drawing.Size(52, 21);
+            this.menuExibir.Text = "Exibir";
+            // 
             // menuExibirZoom
             // 
             this.menuExibirZoom.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -257,25 +254,25 @@
             this.menuExibirZoomReduzir,
             this.menuExibirZoomRestaurar});
             this.menuExibirZoom.Name = "menuExibirZoom";
-            this.menuExibirZoom.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirZoom.Size = new System.Drawing.Size(165, 22);
             this.menuExibirZoom.Text = "Zoom";
             // 
             // menuExibirZoomAmpliar
             // 
             this.menuExibirZoomAmpliar.Name = "menuExibirZoomAmpliar";
-            this.menuExibirZoomAmpliar.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirZoomAmpliar.Size = new System.Drawing.Size(132, 22);
             this.menuExibirZoomAmpliar.Text = "Ampliar";
             // 
             // menuExibirZoomReduzir
             // 
             this.menuExibirZoomReduzir.Name = "menuExibirZoomReduzir";
-            this.menuExibirZoomReduzir.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirZoomReduzir.Size = new System.Drawing.Size(132, 22);
             this.menuExibirZoomReduzir.Text = "Reduzir";
             // 
             // menuExibirZoomRestaurar
             // 
             this.menuExibirZoomRestaurar.Name = "menuExibirZoomRestaurar";
-            this.menuExibirZoomRestaurar.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirZoomRestaurar.Size = new System.Drawing.Size(132, 22);
             this.menuExibirZoomRestaurar.Text = "Restaurar";
             // 
             // menuExibirBarraDeStatus
@@ -284,8 +281,17 @@
             this.menuExibirBarraDeStatus.CheckOnClick = true;
             this.menuExibirBarraDeStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.menuExibirBarraDeStatus.Name = "menuExibirBarraDeStatus";
-            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(165, 22);
             this.menuExibirBarraDeStatus.Text = "Barra de Status";
+            // 
+            // menuAjuda
+            // 
+            this.menuAjuda.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuAjudaExibirAjuda,
+            this.menuAjudaSobre});
+            this.menuAjuda.Name = "menuAjuda";
+            this.menuAjuda.Size = new System.Drawing.Size(53, 21);
+            this.menuAjuda.Text = "Ajuda";
             // 
             // menuAjudaExibirAjuda
             // 
