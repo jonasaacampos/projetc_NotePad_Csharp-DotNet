@@ -235,15 +235,20 @@
             // 
             // menuFormatarQuebraDeLinhaAutomatica
             // 
+            this.menuFormatarQuebraDeLinhaAutomatica.Checked = true;
+            this.menuFormatarQuebraDeLinhaAutomatica.CheckOnClick = true;
+            this.menuFormatarQuebraDeLinhaAutomatica.CheckState = System.Windows.Forms.CheckState.Checked;
             this.menuFormatarQuebraDeLinhaAutomatica.Name = "menuFormatarQuebraDeLinhaAutomatica";
             this.menuFormatarQuebraDeLinhaAutomatica.Size = new System.Drawing.Size(238, 22);
             this.menuFormatarQuebraDeLinhaAutomatica.Text = "Quebra de linha automática";
+            this.menuFormatarQuebraDeLinhaAutomatica.Click += new System.EventHandler(this.menuFormatarQuebraDeLinhaAutomatica_Click);
             // 
             // menuFormatarFonte
             // 
             this.menuFormatarFonte.Name = "menuFormatarFonte";
             this.menuFormatarFonte.Size = new System.Drawing.Size(238, 22);
             this.menuFormatarFonte.Text = "Fonte";
+            this.menuFormatarFonte.Click += new System.EventHandler(this.menuFormatarFonte_Click);
             // 
             // menuExibir
             // 

@@ -248,6 +248,33 @@ namespace NotePad_CS
 
         #endregion
 
+        #region Menu Formatar
+
+        private void menuFormatarQuebraDeLinhaAutomatica_Click(object sender, EventArgs e)
+        {
+            txtContent.WordWrap = menuFormatarQuebraDeLinhaAutomatica.Checked;
+
+        }
+
+        private void menuFormatarFonte_Click(object sender, EventArgs e)
+        {
+            FontDialog fonte = new FontDialog();
+            fonte.ShowColor = true;
+            fonte.ShowEffects = true;
+
+            fonte.Font = txtContent.Font;
+            fonte.Color = txtContent.ForeColor;
+
+            DialogResult caixaDialogoFonte = fonte.ShowDialog();
+
+            if (caixaDialogoFonte == DialogResult.OK)
+            {
+                txtContent.Font = fonte.Font;
+                txtContent.ForeColor = fonte.Color;
+            }
+        }
+
+        #endregion
 
         #region toolStripStatusLabel1_Click
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
@@ -257,8 +284,9 @@ namespace NotePad_CS
 
 
 
+
         #endregion
 
-       
+        
     }
 }
