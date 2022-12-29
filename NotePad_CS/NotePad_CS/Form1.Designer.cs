@@ -168,14 +168,16 @@
             // menuEditarDesfazer
             // 
             this.menuEditarDesfazer.Name = "menuEditarDesfazer";
-            this.menuEditarDesfazer.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarDesfazer.Size = new System.Drawing.Size(180, 22);
             this.menuEditarDesfazer.Text = "Desfazer";
+            this.menuEditarDesfazer.Click += new System.EventHandler(this.menuEditarDesfazer_Click);
             // 
             // menuEditarRefazer
             // 
             this.menuEditarRefazer.Name = "menuEditarRefazer";
-            this.menuEditarRefazer.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarRefazer.Size = new System.Drawing.Size(180, 22);
             this.menuEditarRefazer.Text = "Refazer";
+            this.menuEditarRefazer.Click += new System.EventHandler(this.menuEditarRefazer_Click);
             // 
             // toolStripSeparator3
             // 
@@ -185,26 +187,30 @@
             // menuEditarRecortar
             // 
             this.menuEditarRecortar.Name = "menuEditarRecortar";
-            this.menuEditarRecortar.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarRecortar.Size = new System.Drawing.Size(180, 22);
             this.menuEditarRecortar.Text = "Recortar";
+            this.menuEditarRecortar.Click += new System.EventHandler(this.menuEditarRecortar_Click);
             // 
             // menuEditarCopiar
             // 
             this.menuEditarCopiar.Name = "menuEditarCopiar";
-            this.menuEditarCopiar.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarCopiar.Size = new System.Drawing.Size(180, 22);
             this.menuEditarCopiar.Text = "Copiar";
+            this.menuEditarCopiar.Click += new System.EventHandler(this.menuEditarCopiar_Click);
             // 
             // menuEditarColar
             // 
             this.menuEditarColar.Name = "menuEditarColar";
-            this.menuEditarColar.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarColar.Size = new System.Drawing.Size(180, 22);
             this.menuEditarColar.Text = "Colar";
+            this.menuEditarColar.Click += new System.EventHandler(this.menuEditarColar_Click);
             // 
             // menuEditarExcluir
             // 
             this.menuEditarExcluir.Name = "menuEditarExcluir";
-            this.menuEditarExcluir.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarExcluir.Size = new System.Drawing.Size(180, 22);
             this.menuEditarExcluir.Text = "Excluir";
+            this.menuEditarExcluir.Click += new System.EventHandler(this.menuEditarExcluir_Click);
             // 
             // toolStripSeparator4
             // 
@@ -214,8 +220,9 @@
             // menuEditarDataHora
             // 
             this.menuEditarDataHora.Name = "menuEditarDataHora";
-            this.menuEditarDataHora.Size = new System.Drawing.Size(147, 22);
+            this.menuEditarDataHora.Size = new System.Drawing.Size(180, 22);
             this.menuEditarDataHora.Text = "Data e Hora";
+            this.menuEditarDataHora.Click += new System.EventHandler(this.menuEditarDataHora_Click);
             // 
             // menuFormatar
             // 

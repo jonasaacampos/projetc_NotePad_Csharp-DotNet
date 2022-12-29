@@ -39,7 +39,6 @@ namespace NotePad_CS
             {
                 writer.Close();
             }
-
           
         }
 
@@ -170,10 +169,84 @@ namespace NotePad_CS
 
         }
 
+        private void txtContent_TextChanged(object sender, EventArgs e)
+        {
+            menuArquivoSalvar.Enabled = true;
+        }
+
         #endregion
 
+        #region Menu Editar
 
+        private void menuEditarDesfazer_Click(object sender, EventArgs e)
+        {
+            txtContent.Undo();
+        }
 
+        private void menuEditarRefazer_Click(object sender, EventArgs e)
+        {
+            txtContent.Redo();
+        }
+
+        private void menuEditarRecortar_Click(object sender, EventArgs e)
+        {
+            txtContent.Cut();
+        }
+
+        private void menuEditarCopiar_Click(object sender, EventArgs e)
+        {
+            txtContent.Copy();
+        }
+
+        private void menuEditarColar_Click(object sender, EventArgs e)
+        {
+            txtContent.Paste();
+        }
+
+        private void menuEditarExcluir_Click(object sender, EventArgs e)
+        {
+            //txtContent.Text retorna uma string, da qual podemos utilizar os métodos de strings
+            // removemos o texto selecionado e retornamos uma nota string, que substitui o texto original
+            txtContent.Text = txtContent.Text.Remove(txtContent.SelectionStart, txtContent.SelectedText.Length);
+        }
+
+        private void menuEditarDataHora_Click(object sender, EventArgs e)
+        {
+            int index = txtContent.SelectionStart;
+            string dataHora = DateTime.Now.ToString();
+
+            //se o cursos estiver no início da linha, inserir a data e hora, e mudar o cursor para a posição posterior 
+            //aos dados inseridos
+            if (txtContent.SelectionStart == txtContent.Text.Length)
+            {
+                txtContent.Text = txtContent.Text + dataHora;
+                txtContent.SelectionStart = index + dataHora.Length;
+                return;
+
+                //se o return foi executado, o programa ignora o restante do método
+            }
+
+            string temp = "";
+
+            for (int i = 0; i < txtContent.Text.Length ; i++)
+            {
+                if (i == txtContent.SelectionStart)
+                {
+                    temp += dataHora;
+                    temp += txtContent.Text[i];
+                }
+                else
+                {
+                    temp += txtContent.Text[i];
+                }
+            }
+
+            txtContent.Text = temp;
+            txtContent.SelectionStart = index + dataHora.Length;
+
+        }
+
+        #endregion
 
 
         #region toolStripStatusLabel1_Click
@@ -186,9 +259,6 @@ namespace NotePad_CS
 
         #endregion
 
-        private void txtContent_TextChanged(object sender, EventArgs e)
-        {
-            menuArquivoSalvar.Enabled = true;
-        }
+       
     }
 }
