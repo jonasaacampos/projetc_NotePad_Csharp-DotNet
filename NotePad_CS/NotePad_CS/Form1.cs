@@ -15,6 +15,98 @@ namespace NotePad_CS
 
         #region Menu Arquivo
 
+        #region Métodos comuns ao menu
+
+        private void SalvarArquivo(string path)
+        {
+            //objeto para escrita do arquivo
+
+            StreamWriter writer = null;
+
+            try
+            {
+                writer = new StreamWriter(path, false); // se o arquivo já existir, ele será sobrescrito | caso esteja como true, o conteúdo é atualizado
+                writer.Write(txtContent.Text);
+
+                FileInfo file = new FileInfo(path);
+                CaminhoArquivoUsuarioDefinir(file);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar o arquivo: \n" + ex.Message);
+            }
+            finally
+            {
+                writer.Close();
+            }
+
+        }
+
+        public void CaixaDialogoSalvar(string tituloCaixaDialogo)
+        {
+            SaveFileDialog mensagemBoxSalvarArquivo = new SaveFileDialog();
+
+            mensagemBoxSalvarArquivo.Title = tituloCaixaDialogo;
+            mensagemBoxSalvarArquivo.Filter = "markDown file | *.md | text file | *.txt| todos | *.*";
+            mensagemBoxSalvarArquivo.CheckFileExists = false;
+
+            var mensagemBoxSalvar = mensagemBoxSalvarArquivo.ShowDialog();
+
+            if (mensagemBoxSalvar != DialogResult.Cancel && mensagemBoxSalvar != DialogResult.Abort)
+            {
+                SalvarArquivo(mensagemBoxSalvarArquivo.FileName);
+            }
+        }
+
+        public void CaixaDialogoAbrir()
+        {
+            OpenFileDialog caixaDialogoAbrirArquivo = new OpenFileDialog();
+            caixaDialogoAbrirArquivo.Filter = "todos | *.*";
+
+            DialogResult caixaAbrirArquivo = caixaDialogoAbrirArquivo.ShowDialog();
+
+            if (caixaAbrirArquivo != DialogResult.Cancel && caixaAbrirArquivo != DialogResult.Abort)
+            {
+                if (File.Exists(caixaDialogoAbrirArquivo.FileName))
+                {
+                    FileInfo file = new FileInfo(caixaDialogoAbrirArquivo.FileName);
+                    Text = Application.ProductName + " | " + file.Name;
+                    CaminhoArquivoUsuarioDefinir(file);
+
+
+
+                    StreamReader reader = null;
+
+                    try
+                    {
+                        reader = new StreamReader(file.FullName, true);
+                        txtContent.Text = reader.ReadToEnd();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Erro ao abrir o arquivo. \n" + ex.Message);
+                    }
+                    finally
+                    {
+                        reader.Close();
+                    }
+
+
+                }
+            }
+
+
+        }
+
+        private static void CaminhoArquivoUsuarioDefinir(FileInfo file)
+        {
+            Gerenciador.FolderPath = file.DirectoryName + "\\";
+            Gerenciador.FileName = file.Name.Remove(file.Name.LastIndexOf("."));
+            Gerenciador.FileExtension = file.Extension;
+        }
+
+        #endregion
 
         private void menuArquivoNovo_Click(object sender, EventArgs e)
         {
@@ -35,8 +127,7 @@ namespace NotePad_CS
             thread.Start();
 
         }
-
-
+ 
         private void menuArquivoSalvar_Click(object sender, EventArgs e)
         {
             if (File.Exists(Gerenciador.FilePath))
@@ -45,57 +136,23 @@ namespace NotePad_CS
             }
             else
             {
-                SaveFileDialog mensagemBoxSalvarArquivo = new SaveFileDialog();
-
-                mensagemBoxSalvarArquivo.Title = "Salvar";
-                mensagemBoxSalvarArquivo.Filter = "markDown file | *.md | text file | *.txt| todos | *.*";
-                mensagemBoxSalvarArquivo.CheckFileExists = false;
-
-                var mensagemBoxSalvar = mensagemBoxSalvarArquivo.ShowDialog();
-
-                if (mensagemBoxSalvar != DialogResult.Cancel && mensagemBoxSalvar != DialogResult.Abort)
-                {
-                    SalvarArquivo(mensagemBoxSalvarArquivo.FileName);
-                }
-
+                CaixaDialogoSalvar("Salvar... ");
+                menuArquivoSalvar.Enabled = false;
             }
 
-        }
-        private void menuArquivoAbrir_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void menuArquivoSalvarComo_Click(object sender, EventArgs e)
         {
+            CaixaDialogoSalvar("Salvar Como...");
 
         }
-
-        private void SalvarArquivo( string path)
+      
+        private void menuArquivoAbrir_Click(object sender, EventArgs e)
         {
-            //objeto para escrita do arquivo
+            CaixaDialogoAbrir();
 
-            StreamWriter writer = null;
-
-            try
-            {
-                writer = new StreamWriter(path, false); // se o arquivo já existir, ele será sobrescrito | caso esteja como true, o conteúdo é atualizado
-                writer.Write(txtContent.Text);
-
-                FileInfo file = new FileInfo(path);
-                Gerenciador.FolderPath = file.DirectoryName + "\\";
-                Gerenciador.FileName = file.Name.Remove(file.Name.LastIndexOf("."));
-                Gerenciador.FileExtension = file.Extension;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao salvar o arquivo: \n" + ex.Message);
-            }
-            finally
-            {
-                writer.Close();
-            }
-
+           
 
         }
 
