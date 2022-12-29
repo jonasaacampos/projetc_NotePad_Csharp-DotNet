@@ -31,8 +31,8 @@
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.menuArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoNovo = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuArquivoAbrir = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoNovaJanela = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuArquivoAbrir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuArquivoSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoSalvarComo = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,19 +104,19 @@
             this.menuArquivoNovo.Text = "Novo";
             this.menuArquivoNovo.Click += new System.EventHandler(this.menuArquivoNovo_Click);
             // 
-            // menuArquivoAbrir
-            // 
-            this.menuArquivoAbrir.Name = "menuArquivoAbrir";
-            this.menuArquivoAbrir.Size = new System.Drawing.Size(180, 22);
-            this.menuArquivoAbrir.Text = "Abrir";
-            this.menuArquivoAbrir.Click += new System.EventHandler(this.menuArquivoAbrir_Click);
-            // 
             // menuArquivoNovaJanela
             // 
             this.menuArquivoNovaJanela.Name = "menuArquivoNovaJanela";
             this.menuArquivoNovaJanela.Size = new System.Drawing.Size(180, 22);
             this.menuArquivoNovaJanela.Text = "Nova Janela";
             this.menuArquivoNovaJanela.Click += new System.EventHandler(this.menuArquivoNovaJanela_Click);
+            // 
+            // menuArquivoAbrir
+            // 
+            this.menuArquivoAbrir.Name = "menuArquivoAbrir";
+            this.menuArquivoAbrir.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoAbrir.Text = "Abrir";
+            this.menuArquivoAbrir.Click += new System.EventHandler(this.menuArquivoAbrir_Click);
             // 
             // toolStripSeparator1
             // 
@@ -331,6 +331,7 @@
             this.txtContent.Size = new System.Drawing.Size(784, 514);
             this.txtContent.TabIndex = 2;
             this.txtContent.Text = "";
+            this.txtContent.TextChanged += new System.EventHandler(this.txtContent_TextChanged);
             // 
             // NotePadCS
             // 

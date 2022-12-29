@@ -40,6 +40,7 @@ namespace NotePad_CS
                 writer.Close();
             }
 
+          
         }
 
         public void CaixaDialogoSalvar(string tituloCaixaDialogo)
@@ -49,12 +50,15 @@ namespace NotePad_CS
             mensagemBoxSalvarArquivo.Title = tituloCaixaDialogo;
             mensagemBoxSalvarArquivo.Filter = "markDown file | *.md | text file | *.txt| todos | *.*";
             mensagemBoxSalvarArquivo.CheckFileExists = false;
-
+  
             var mensagemBoxSalvar = mensagemBoxSalvarArquivo.ShowDialog();
+
+            FileInfo file = new FileInfo(mensagemBoxSalvarArquivo.FileName);
 
             if (mensagemBoxSalvar != DialogResult.Cancel && mensagemBoxSalvar != DialogResult.Abort)
             {
                 SalvarArquivo(mensagemBoxSalvarArquivo.FileName);
+                Text = Application.ProductName + " | " + file.Name;
             }
         }
 
@@ -73,8 +77,6 @@ namespace NotePad_CS
                     Text = Application.ProductName + " | " + file.Name;
                     CaminhoArquivoUsuarioDefinir(file);
 
-
-
                     StreamReader reader = null;
 
                     try
@@ -90,16 +92,15 @@ namespace NotePad_CS
                     finally
                     {
                         reader.Close();
+                        menuArquivoSalvar.Enabled = true;
                     }
-
 
                 }
             }
 
-
         }
 
-        private static void CaminhoArquivoUsuarioDefinir(FileInfo file)
+        public static void CaminhoArquivoUsuarioDefinir(FileInfo file)
         {
             Gerenciador.FolderPath = file.DirectoryName + "\\";
             Gerenciador.FileName = file.Name.Remove(file.Name.LastIndexOf("."));
@@ -111,6 +112,8 @@ namespace NotePad_CS
         private void menuArquivoNovo_Click(object sender, EventArgs e)
         {
             txtContent.Clear();
+            menuArquivoSalvar.Enabled = true;
+            Text = Application.ProductName;
         }
 
         private void menuArquivoNovaJanela_Click(object sender, EventArgs e)
@@ -125,6 +128,7 @@ namespace NotePad_CS
             Thread thread = new Thread(() => Application.Run(new NotePadCS()));
             thread.SetApartmentState(ApartmentState.STA); // definir se será uma thread única ou múltipla (processamento em fila ou em pararelo)
             thread.Start();
+            Text = Application.ProductName;
 
         }
  
@@ -151,8 +155,6 @@ namespace NotePad_CS
         private void menuArquivoAbrir_Click(object sender, EventArgs e)
         {
             CaixaDialogoAbrir();
-
-           
 
         }
 
@@ -181,8 +183,12 @@ namespace NotePad_CS
         }
 
 
+
         #endregion
 
-
+        private void txtContent_TextChanged(object sender, EventArgs e)
+        {
+            menuArquivoSalvar.Enabled = true;
+        }
     }
 }
