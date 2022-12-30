@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotePadCS));
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.menuArquivo = new System.Windows.Forms.ToolStripMenuItem();
             this.menuArquivoNovo = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,14 +100,16 @@
             // 
             // menuArquivoNovo
             // 
+            this.menuArquivoNovo.Image = global::NotePad_CS.Properties.Resources.new_document;
             this.menuArquivoNovo.Name = "menuArquivoNovo";
             this.menuArquivoNovo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.menuArquivoNovo.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoNovo.Size = new System.Drawing.Size(228, 22);
             this.menuArquivoNovo.Text = "Novo";
             this.menuArquivoNovo.Click += new System.EventHandler(this.menuArquivoNovo_Click);
             // 
             // menuArquivoNovaJanela
             // 
+            this.menuArquivoNovaJanela.Image = global::NotePad_CS.Properties.Resources.notes;
             this.menuArquivoNovaJanela.Name = "menuArquivoNovaJanela";
             this.menuArquivoNovaJanela.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.N)));
@@ -116,6 +119,7 @@
             // 
             // menuArquivoAbrir
             // 
+            this.menuArquivoAbrir.Image = global::NotePad_CS.Properties.Resources.folder;
             this.menuArquivoAbrir.Name = "menuArquivoAbrir";
             this.menuArquivoAbrir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.menuArquivoAbrir.Size = new System.Drawing.Size(228, 22);
@@ -125,10 +129,11 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(225, 6);
             // 
             // menuArquivoSalvar
             // 
+            this.menuArquivoSalvar.Image = global::NotePad_CS.Properties.Resources.save;
             this.menuArquivoSalvar.Name = "menuArquivoSalvar";
             this.menuArquivoSalvar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.menuArquivoSalvar.Size = new System.Drawing.Size(228, 22);
@@ -147,12 +152,13 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(225, 6);
             // 
             // menuArquivoSair
             // 
+            this.menuArquivoSair.Image = global::NotePad_CS.Properties.Resources.exit;
             this.menuArquivoSair.Name = "menuArquivoSair";
-            this.menuArquivoSair.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoSair.Size = new System.Drawing.Size(228, 22);
             this.menuArquivoSair.Text = "Sair";
             this.menuArquivoSair.Click += new System.EventHandler(this.menuArquivoSair_Click);
             // 
@@ -191,7 +197,7 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(144, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
             // 
             // menuEditarRecortar
             // 
@@ -228,7 +234,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(144, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
             // 
             // menuEditarDataHora
             // 
@@ -279,6 +285,7 @@
             this.menuExibirZoomAmpliar,
             this.menuExibirZoomReduzir,
             this.menuExibirZoomRestaurar});
+            this.menuExibirZoom.Image = global::NotePad_CS.Properties.Resources.zoom;
             this.menuExibirZoom.Name = "menuExibirZoom";
             this.menuExibirZoom.Size = new System.Drawing.Size(180, 22);
             this.menuExibirZoom.Text = "Zoom";
@@ -315,7 +322,7 @@
             this.menuExibirBarraDeStatus.CheckOnClick = true;
             this.menuExibirBarraDeStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.menuExibirBarraDeStatus.Name = "menuExibirBarraDeStatus";
-            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(165, 22);
+            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(180, 22);
             this.menuExibirBarraDeStatus.Text = "Barra de Status";
             this.menuExibirBarraDeStatus.Click += new System.EventHandler(this.menuExibirBarraDeStatus_Click);
             // 
@@ -330,6 +337,7 @@
             // 
             // menuAjudaExibirAjuda
             // 
+            this.menuAjudaExibirAjuda.Image = global::NotePad_CS.Properties.Resources.help;
             this.menuAjudaExibirAjuda.Name = "menuAjudaExibirAjuda";
             this.menuAjudaExibirAjuda.Size = new System.Drawing.Size(198, 22);
             this.menuAjudaExibirAjuda.Text = "Exibir Ajuda";
@@ -364,6 +372,7 @@
             this.txtContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtContent.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContent.Location = new System.Drawing.Point(0, 25);
+            this.txtContent.Margin = new System.Windows.Forms.Padding(5);
             this.txtContent.Name = "txtContent";
             this.txtContent.Size = new System.Drawing.Size(784, 514);
             this.txtContent.TabIndex = 2;
@@ -378,6 +387,7 @@
             this.Controls.Add(this.txtContent);
             this.Controls.Add(this.statusBar);
             this.Controls.Add(this.menuBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuBar;
             this.Name = "NotePadCS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
