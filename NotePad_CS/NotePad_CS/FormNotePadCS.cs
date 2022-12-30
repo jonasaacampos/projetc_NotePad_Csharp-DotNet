@@ -307,11 +307,31 @@ namespace NotePad_CS
 
         #endregion
 
+        #region Menu Ajuda
+
+        private void menuAjudaExibirAjuda_Click(object sender, EventArgs e)
+        {
+            FormAjuda formPaginaAjuda = new FormAjuda();
+            formPaginaAjuda.Show();
+
+        }
+
+        private void menuAjudaSobre_Click(object sender, EventArgs e)
+        {
+            FormSobre formSobre = new FormSobre();
+            formSobre.Show();
+        }
+
+        #endregion
+
+
+
         #region toolStripStatusLabel1_Click
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
         }
+
 
 
 

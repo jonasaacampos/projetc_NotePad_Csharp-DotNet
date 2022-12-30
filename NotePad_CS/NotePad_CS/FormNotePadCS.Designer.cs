@@ -314,12 +314,14 @@
             this.menuAjudaExibirAjuda.Name = "menuAjudaExibirAjuda";
             this.menuAjudaExibirAjuda.Size = new System.Drawing.Size(198, 22);
             this.menuAjudaExibirAjuda.Text = "Exibir Ajuda";
+            this.menuAjudaExibirAjuda.Click += new System.EventHandler(this.menuAjudaExibirAjuda_Click);
             // 
             // menuAjudaSobre
             // 
             this.menuAjudaSobre.Name = "menuAjudaSobre";
             this.menuAjudaSobre.Size = new System.Drawing.Size(198, 22);
             this.menuAjudaSobre.Text = "Sobre o NotePad_CS";
+            this.menuAjudaSobre.Click += new System.EventHandler(this.menuAjudaSobre_Click);
             // 
             // statusBar
             // 
