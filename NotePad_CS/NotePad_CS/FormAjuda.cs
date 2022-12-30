@@ -15,7 +15,7 @@ namespace NotePad_CS
         public FormAjuda()
         {
             InitializeComponent();
-            webBrowser.Navigate("google.com");
+            webBrowser.Navigate("https://jonasaacampos.github.io/projetc_NotePad_Csharp-DotNet/");
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
