@@ -324,7 +324,12 @@ namespace NotePad_CS
 
         #endregion
 
-
+        #region Menu Bar ToolBox
+         private void toolBarSalvar_Click(object sender, EventArgs e)
+                {
+                        menuArquivoSalvar_Click(sender, e);
+                }
+        #endregion
 
         #region toolStripStatusLabel1_Click
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
@@ -337,8 +342,10 @@ namespace NotePad_CS
 
 
 
+
         #endregion
 
-       
+      
+
     }
 }
