@@ -100,6 +100,7 @@
             // menuArquivoNovo
             // 
             this.menuArquivoNovo.Name = "menuArquivoNovo";
+            this.menuArquivoNovo.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.menuArquivoNovo.Size = new System.Drawing.Size(180, 22);
             this.menuArquivoNovo.Text = "Novo";
             this.menuArquivoNovo.Click += new System.EventHandler(this.menuArquivoNovo_Click);
@@ -107,14 +108,17 @@
             // menuArquivoNovaJanela
             // 
             this.menuArquivoNovaJanela.Name = "menuArquivoNovaJanela";
-            this.menuArquivoNovaJanela.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoNovaJanela.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.N)));
+            this.menuArquivoNovaJanela.Size = new System.Drawing.Size(228, 22);
             this.menuArquivoNovaJanela.Text = "Nova Janela";
             this.menuArquivoNovaJanela.Click += new System.EventHandler(this.menuArquivoNovaJanela_Click);
             // 
             // menuArquivoAbrir
             // 
             this.menuArquivoAbrir.Name = "menuArquivoAbrir";
-            this.menuArquivoAbrir.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoAbrir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.menuArquivoAbrir.Size = new System.Drawing.Size(228, 22);
             this.menuArquivoAbrir.Text = "Abrir";
             this.menuArquivoAbrir.Click += new System.EventHandler(this.menuArquivoAbrir_Click);
             // 
@@ -126,14 +130,17 @@
             // menuArquivoSalvar
             // 
             this.menuArquivoSalvar.Name = "menuArquivoSalvar";
-            this.menuArquivoSalvar.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoSalvar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.menuArquivoSalvar.Size = new System.Drawing.Size(228, 22);
             this.menuArquivoSalvar.Text = "Salvar";
             this.menuArquivoSalvar.Click += new System.EventHandler(this.menuArquivoSalvar_Click);
             // 
             // menuArquivoSalvarComo
             // 
             this.menuArquivoSalvarComo.Name = "menuArquivoSalvarComo";
-            this.menuArquivoSalvarComo.Size = new System.Drawing.Size(180, 22);
+            this.menuArquivoSalvarComo.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.menuArquivoSalvarComo.Size = new System.Drawing.Size(228, 22);
             this.menuArquivoSalvarComo.Text = "Salvar Como";
             this.menuArquivoSalvarComo.Click += new System.EventHandler(this.menuArquivoSalvarComo_Click);
             // 
@@ -168,6 +175,7 @@
             // menuEditarDesfazer
             // 
             this.menuEditarDesfazer.Name = "menuEditarDesfazer";
+            this.menuEditarDesfazer.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
             this.menuEditarDesfazer.Size = new System.Drawing.Size(180, 22);
             this.menuEditarDesfazer.Text = "Desfazer";
             this.menuEditarDesfazer.Click += new System.EventHandler(this.menuEditarDesfazer_Click);
@@ -175,6 +183,7 @@
             // menuEditarRefazer
             // 
             this.menuEditarRefazer.Name = "menuEditarRefazer";
+            this.menuEditarRefazer.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
             this.menuEditarRefazer.Size = new System.Drawing.Size(180, 22);
             this.menuEditarRefazer.Text = "Refazer";
             this.menuEditarRefazer.Click += new System.EventHandler(this.menuEditarRefazer_Click);
@@ -187,6 +196,7 @@
             // menuEditarRecortar
             // 
             this.menuEditarRecortar.Name = "menuEditarRecortar";
+            this.menuEditarRecortar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.menuEditarRecortar.Size = new System.Drawing.Size(180, 22);
             this.menuEditarRecortar.Text = "Recortar";
             this.menuEditarRecortar.Click += new System.EventHandler(this.menuEditarRecortar_Click);
@@ -194,6 +204,7 @@
             // menuEditarCopiar
             // 
             this.menuEditarCopiar.Name = "menuEditarCopiar";
+            this.menuEditarCopiar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
             this.menuEditarCopiar.Size = new System.Drawing.Size(180, 22);
             this.menuEditarCopiar.Text = "Copiar";
             this.menuEditarCopiar.Click += new System.EventHandler(this.menuEditarCopiar_Click);
@@ -201,6 +212,7 @@
             // menuEditarColar
             // 
             this.menuEditarColar.Name = "menuEditarColar";
+            this.menuEditarColar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
             this.menuEditarColar.Size = new System.Drawing.Size(180, 22);
             this.menuEditarColar.Text = "Colar";
             this.menuEditarColar.Click += new System.EventHandler(this.menuEditarColar_Click);
@@ -208,6 +220,7 @@
             // menuEditarExcluir
             // 
             this.menuEditarExcluir.Name = "menuEditarExcluir";
+            this.menuEditarExcluir.ShortcutKeyDisplayString = "Delete";
             this.menuEditarExcluir.Size = new System.Drawing.Size(180, 22);
             this.menuEditarExcluir.Text = "Excluir";
             this.menuEditarExcluir.Click += new System.EventHandler(this.menuEditarExcluir_Click);
@@ -220,6 +233,7 @@
             // menuEditarDataHora
             // 
             this.menuEditarDataHora.Name = "menuEditarDataHora";
+            this.menuEditarDataHora.ShortcutKeys = System.Windows.Forms.Keys.F5;
             this.menuEditarDataHora.Size = new System.Drawing.Size(180, 22);
             this.menuEditarDataHora.Text = "Data e Hora";
             this.menuEditarDataHora.Click += new System.EventHandler(this.menuEditarDataHora_Click);
@@ -272,21 +286,26 @@
             // menuExibirZoomAmpliar
             // 
             this.menuExibirZoomAmpliar.Name = "menuExibirZoomAmpliar";
-            this.menuExibirZoomAmpliar.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirZoomAmpliar.ShortcutKeyDisplayString = "Ctrl \'+\' +";
+            this.menuExibirZoomAmpliar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Oemplus)));
+            this.menuExibirZoomAmpliar.Size = new System.Drawing.Size(181, 22);
             this.menuExibirZoomAmpliar.Text = "Ampliar";
             this.menuExibirZoomAmpliar.Click += new System.EventHandler(this.menuExibirZoomAmpliar_Click);
             // 
             // menuExibirZoomReduzir
             // 
             this.menuExibirZoomReduzir.Name = "menuExibirZoomReduzir";
-            this.menuExibirZoomReduzir.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirZoomReduzir.ShortcutKeyDisplayString = "Ctrl \'+\' -";
+            this.menuExibirZoomReduzir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.OemMinus)));
+            this.menuExibirZoomReduzir.Size = new System.Drawing.Size(181, 22);
             this.menuExibirZoomReduzir.Text = "Reduzir";
             this.menuExibirZoomReduzir.Click += new System.EventHandler(this.menuExibirZoomReduzir_Click);
             // 
             // menuExibirZoomRestaurar
             // 
             this.menuExibirZoomRestaurar.Name = "menuExibirZoomRestaurar";
-            this.menuExibirZoomRestaurar.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirZoomRestaurar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D0)));
+            this.menuExibirZoomRestaurar.Size = new System.Drawing.Size(181, 22);
             this.menuExibirZoomRestaurar.Text = "Restaurar";
             this.menuExibirZoomRestaurar.Click += new System.EventHandler(this.menuExibirZoomRestaurar_Click);
             // 
@@ -296,7 +315,7 @@
             this.menuExibirBarraDeStatus.CheckOnClick = true;
             this.menuExibirBarraDeStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.menuExibirBarraDeStatus.Name = "menuExibirBarraDeStatus";
-            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(180, 22);
+            this.menuExibirBarraDeStatus.Size = new System.Drawing.Size(165, 22);
             this.menuExibirBarraDeStatus.Text = "Barra de Status";
             this.menuExibirBarraDeStatus.Click += new System.EventHandler(this.menuExibirBarraDeStatus_Click);
             // 
